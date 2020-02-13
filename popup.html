@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script src="./popup.js"></script>
+    <form action="post" id="input-org">
+        <label for="id-organization">* Organization Name</label>
+        <input type="text" name="organization" id="id-organization" required>
+        <label for="id-url">* URL</label>
+        <input type="text" name="url" id="id-url" required>
+        <label for="id-description">* Description</label>
+        <input type="text" name="description" id="id-description" required>
+        <label for="id-logo">Logo</label>
+        <input type="file" name="logo" id="id-logo">
+        <label for="id-location">Location</label>
+        <input type="text" name="location">
+
+        <label for="id-impact_area">Impact Area(s)</label>
+        <select name="impact_area" id="id-impact_area" multiple>
+            <option value="food-ag">Food &amp; Agriculture</option>
+            <option value="energy">Energy</option>
+            <option value="carbontech">Carbontech</option>
+            <option value="eco-bio">Ecosystems &amp; Biodiversity</option>
+            <option value="capital">Capital</option>
+            <option value="transportation">Transportation</option>
+            <option value="buildings-cities">Buildings &amp; Cities</option>
+            <option value="advocacy-activism">Advocacy &amp; Activism</option>
+            <option value="waste">Circular Economy &amp; Waste</option>
+            <option value="materials-manufacturing">Materials &amp; Manufacturing</option>
+            <option value="education-research">Education &amp; Research</option>
+        </select>
+
+        <label for="id-org_type">Organization Type</label>
+        <select name="org_type" id="id-org_type">
+            <option value="for-profit">For-Profit</option>
+            <option value="nonprofit">Non-Profit</option>
+            <option value="investors">Investors</option>
+            <option value="edu">University or other educational program</option>
+            <option value="gov">State-funded program</option>
+            <option value="media">Media</option>
+        </select>
+
+        <input type="submit" value="Submit Organization">
+    </form>    
+</body>
+</html>
