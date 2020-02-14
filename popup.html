@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <script src="./jquery-3.4.1.min.js"></script>
+    <script src="./browser-polyfill.min.js"></script>
     <script src="./popup.js"></script>
+
     <form action="post" id="input-org">
         <label for="id-organization">* Organization Name</label>
         <input type="text" name="organization" id="id-organization" required>
@@ -43,7 +46,7 @@
             <option value="media">Media</option>
         </select>
 
-        <input type="submit" value="Submit Organization">
+        <input type="submit" id="id-submit" value="Submit Organization">
     </form>    
 </body>
 </html>
