@@ -4,8 +4,8 @@
     "description": "Add organizations to ClimateBase's database!",
     "background": {
         "scripts": [
-            "browser-polyfill.min.js",
-            "jquery-3.4.1.min.js"
+            "js/browser-polyfill.min.js",
+            "js/jquery-3.4.1.min.js"
         ]
     },
     "browser_action": {
@@ -23,5 +23,10 @@
         "activeTab",
         "identity"
     ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{ed2c7f87-9623-4624-adcd-158d4a02f28a}"
+        }
+    },
     "manifest_version": 2
   }
