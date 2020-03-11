@@ -1,52 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <script src="./jquery-3.4.1.min.js"></script>
-    <script src="./browser-polyfill.min.js"></script>
-    <script src="./popup.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/browser-polyfill.min.js"></script>
+  <script src="js/popup.js"></script>
 
-    <form action="post" id="input-org">
-        <label for="id-organization">* Organization Name</label>
-        <input type="text" name="organization" id="id-organization" required>
-        <label for="id-url">* URL</label>
-        <input type="text" name="url" id="id-url" required>
-        <label for="id-description">* Description</label>
-        <input type="text" name="description" id="id-description" required>
-        <label for="id-logo">Logo</label>
-        <input type="file" name="logo" id="id-logo">
-        <label for="id-location">Location</label>
-        <input type="text" name="location">
+  <form action="post" id="form">
 
-        <label for="id-impact_area">Impact Area(s)</label>
-        <select name="impact_area" id="id-impact_area" multiple>
-            <option value="food-ag">Food &amp; Agriculture</option>
-            <option value="energy">Energy</option>
-            <option value="carbontech">Carbontech</option>
-            <option value="eco-bio">Ecosystems &amp; Biodiversity</option>
-            <option value="capital">Capital</option>
-            <option value="transportation">Transportation</option>
-            <option value="buildings-cities">Buildings &amp; Cities</option>
-            <option value="advocacy-activism">Advocacy &amp; Activism</option>
-            <option value="waste">Circular Economy &amp; Waste</option>
-            <option value="materials-manufacturing">Materials &amp; Manufacturing</option>
-            <option value="education-research">Education &amp; Research</option>
-        </select>
+    <div class="columns">
+      <div class="column">
 
-        <label for="id-org_type">Organization Type</label>
-        <select name="org_type" id="id-org_type">
-            <option value="for-profit">For-Profit</option>
-            <option value="nonprofit">Non-Profit</option>
-            <option value="investors">Investors</option>
-            <option value="edu">University or other educational program</option>
-            <option value="gov">State-funded program</option>
-            <option value="media">Media</option>
-        </select>
+	<div class="field">
+	  <label for="id-organization" class="label">Organization *</label>
+	  <div class="control">
+	    <input type="text" name="organization" id="id-organization" placeholder="Organization name" required>
+	  </div>
+	</div>
 
-        <input type="submit" id="id-submit" value="Submit Organization">
-    </form>    
+	<div class="field">
+	  <label for="id-url" class="label">URL *</label>
+	  <div class="control">
+	    <input type="text" name="url" id="id-url" placeholder="ex: https://climate.careers/" required>
+	  </div>
+	</div>
+
+	<div class="field">
+	  <label for="id-description" class="label">Description *</label>
+	  <div class="control">
+	    <input type="text" name="description" id="id-description" placeholder="1 or 2 sentence description" required>
+	  </div>
+	</div>
+
+	<div class="field">
+	  <label for="id-logo" class="label">Logo</label>
+	  <div class="control">
+	    <input type="file" name="logo" id="id-logo" placeholder="Please upload a logo">
+	  </div>
+	</div>
+
+      </div>      
+      <div class="column">
+
+	<div class="field">
+	  <label for="id-impact_area" class="label">Impact Area(s)</label>
+	  <div class="control">
+	    <div class="select is-multiple">
+	      <select name="impact_area" id="id-impact_area" multiple>
+		<option value="food-ag">Food &amp; Agriculture</option>
+		<option value="energy">Energy</option>
+		<option value="carbontech">Carbontech</option>
+		<option value="eco-bio">Ecosystems &amp; Biodiversity</option>
+		<option value="capital">Capital</option>
+		<option value="transportation">Transportation</option>
+		<option value="buildings-cities">Buildings &amp; Cities</option>
+		<option value="advocacy-activism">Advocacy &amp; Activism</option>
+		<option value="waste">Circular Economy &amp; Waste</option>
+		<option value="materials-manufacturing">Materials &amp; Manufacturing</option>
+		<option value="education-research">Education &amp; Research</option>
+	      </select>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="field">
+	  <label for="id-industry" class="label">Industry</label>
+	  <div class="control">
+	    <div class="select is-multiple">
+	      <select name="industry" id="id-industry" multiple>
+		<option value="accounting">Accounting</option>
+		<option value="airlines">Airlines/Aviation</option>
+		<option value="apparel_fashion">Apparel & Fashion</option>
+		<option value="architecture_planning">Architecture & Planning</option>
+		<option value="automotive">Automotive</option>
+		<option value="aviation_aerospace">Aviation & Aerospace</option>
+		<option value="banking">Banking</option>
+		<option value="biotechnology">Biotechnology</option>
+		<option value="broadcast_media">Broadcast Media</option>
+		<option value="building_materials">Building Materials</option>
+		<option value="business_supplies">Business Supplies and Equipment</option>
+		<option value="capital_markets">Capital Markets</option>
+		<option value="chemicals">Chemicals</option>
+		<option value="civic_social_organization">Civic & Social Organization</option>
+		<option value="civil_engineering">Civil Engineering</option>
+		<option value="computer_network_security">Computer & Network Security</option>
+		<option value="computer_hardware">Computer Hardware</option>
+		<option value="computer_networking">Computer Networking</option>
+		<option value="computer_software">Computer Software</option>
+		<option value="construction">Construction</option>
+		<option value="consumer_electronics">Consumer Electronics</option>
+		<option value="consumer_goods">Consumer Goods</option>
+		<option value="consumer_services">Consumer Services</option>
+		<option value="design">Design</option>
+		<option value="education_management">Education Management</option>
+		<option value="electrical_electronic_manufacturing">Electrical/Electronic Manufacturing</option>
+		<option value="entertainment">Entertainment</option>
+		<option value="environmental_services">Environmental Services</option>
+		<option value="events_services">Events Services</option>
+		<option value="executive_office">Executive Office</option>
+		<option value="facilities_services">Facilities Services</option>
+		<option value="farming">Farming</option>
+		<option value="financial_services">Financial Services</option>
+		<option value="fishery">Fishery</option>
+		<option value="food_beverages">Food & Beverages</option>
+		<option value="food_production">Food Production</option>
+		<option value="fundraising">Fund-Raising</option>
+		<option value="furniture">Furniture</option>
+		<option value="glass_ceramics_concrete">Glass, Ceramics & Concrete</option>
+		<option value="government_administration">Government Administration</option>
+		<option value="government_relations">Government Relations</option>
+		<option value="graphic_design">Graphic Design</option>
+		<option value="higher_education">Higher Education</option>
+		<option value="hospital_health_care">Hospital & Health Care</option>
+		<option value="hospitality">Hospitality</option>
+		<option value="human_resources">Human Resources</option>
+		<option value="industrial_automation">Industrial Automation</option>
+		<option value="information_services">Information Services</option>
+		<option value="information_technology_services">Information Technology and Services</option>
+		<option value="international_affairs">International Affairs</option>
+		<option value="international_trade_development">International Trade and Development</option>
+		<option value="internet">Internet</option>
+		<option value="investment_banking">Investment Banking</option>
+		<option value="investment_management">Investment Management</option>
+		<option value="legal_services">Legal Services</option>
+		<option value="legislative_office">Legislative Office</option>
+		<option value="logistics_supply_chain">Logistics and Supply Chain</option>
+		<option value="machinery">Machinery</option>
+		<option value="management_consulting">Management Consulting</option>
+		<option value="marketing_advertising">Marketing and Advertising</option>
+		<option value="market_research">Market Research</option>
+		<option value="mechanical_industrial_engineering">Mechanical or Industrial Engineering</option>
+		<option value="media_production">Media Production</option>
+		<option value="newspapers">Newspapers</option>
+		<option value="nonprofit_organization_management">Nonprofit Organization Management</option>
+		<option value="package_freight_delivery">Package/Freight Delivery</option>
+		<option value="packaging_containers">Packaging and Containers</option>
+		<option value="philanthropy">Philanthropy</option>
+		<option value="plastics">Plastics</option>
+		<option value="political_organization">Political Organization</option>
+		<option value="primary_secondary_education">Primary/Secondary Education</option>
+		<option value="professional_training_coaching">Professional Training & Coaching</option>
+		<option value="public_policy">Public Policy</option>
+		<option value="public_relations_communications">Public Relations and Communications</option>
+		<option value="public_safety">Public Safety</option>
+		<option value="publishing">Publishing</option>
+		<option value="renewables_environment">Renewables & Environment</option>
+		<option value="research">Research</option>
+		<option value="restaurants">Restaurants</option>
+		<option value="retail">Retail</option>
+		<option value="semiconductors">Semiconductors</option>
+		<option value="shipbuilding">Shipbuilding</option>
+		<option value="textiles">Textiles</option>
+		<option value="think_tanks">Think Tanks</option>
+		<option value="translation_and_localization">Translation and Localization</option>
+		<option value="transportation_trucking_railroad">Transportation/Trucking/Railroad</option>
+		<option value="utilities">Utilities</option>
+		<option value="venture_capital_private_equity">Venture Capital & Private Equity</option>
+		<option value="writing_editing">Writing and Editing</option>
+	      </select>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="field">
+	  <label for="id-org_type" class="label">Organization Type</label>
+	  <div class="control">
+	    <div class="select">
+	      <select name="org_type" id="id-org_type">
+		<option value="for-profit">For-Profit</option>
+		<option value="nonprofit">Non-Profit</option>
+		<option value="investors">Investors</option>
+		<option value="edu">University or other educational program</option>
+		<option value="gov">State-funded program</option>
+		<option value="media">Media</option>
+	      </select>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="field">
+	  <label for="id-location" class="label">Location</label>
+	  <div class="control">
+	    <input type="text" name="location" placeholder="City, State, Country">
+	  </div>
+	</div>
+
+      </div>
+    </div>
+
+    <div class="buttons is-centered">
+      <div class="control">
+	<input type="submit" id="id-submit" class="button is-rounded" value="Submit Organization">
+      </div>
+    </div>
+
+  </form>
 </body>
 </html>

@@ -1,0 +1,21 @@
+* {
+    font-family: "Helvetica Neue, serif";
+}
+
+body {
+    padding: 30px;
+    width: 800px;
+    background-color: #F4F4F6;
+    font-family: "Helvetica Neue, serif";
+}
+
+#form input::placeholder {
+    font-style: italic;
+}
+
+#id-submit {
+    background-color: #F16322;
+    color: #FFF;
+    font-weight: bold;
+}
+
