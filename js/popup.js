@@ -7,5 +7,20 @@ $(document).ready(function() {
       // To be filled in. Currently uploading so that I can get app ID for OAuth.
     }
   });
+
+  $('#id-impact_area').select2({
+    placeholder: 'Click to select',
+    multiple: true
+  });
+
+  $('#id-industry').select2({
+    placeholder: 'Click to select',
+    multiple: true
+  });
+  
+  $('#id-org_type').select2({
+    placeholder: 'Click to select',
+    multiple: true
+  });
 });
 

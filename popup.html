@@ -1,78 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bulma.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/browser-polyfill.min.js"></script>
-  <script src="js/popup.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/browser-polyfill.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <script src="js/popup.js"></script>
+  </head>
+  <body>
+    <form action="post" id="form">
 
-  <form action="post" id="form">
+      <div class="columns">
+        <div class="column">
 
-    <div class="columns">
-      <div class="column">
-
-	<div class="field">
-	  <label for="id-organization" class="label">Organization *</label>
-	  <div class="control">
-	    <input type="text" name="organization" id="id-organization" placeholder="Organization name" required>
+	  <div class="field">
+	    <label for="id-organization" class="label">Organization *</label>
+	    <div class="control">
+	      <input type="text" name="organization" class="rounded-custom" id="id-organization" placeholder="Organization name" required>
+	    </div>
 	  </div>
-	</div>
 
-	<div class="field">
-	  <label for="id-url" class="label">URL *</label>
-	  <div class="control">
-	    <input type="text" name="url" id="id-url" placeholder="ex: https://climate.careers/" required>
+	  <div class="field">
+	    <label for="id-url" class="label">URL *</label>
+	    <div class="control">
+	      <input type="text" name="url" class="rounded-custom" id="id-url" placeholder="ex: https://climate.careers/" required>
+	    </div>
 	  </div>
-	</div>
 
-	<div class="field">
-	  <label for="id-description" class="label">Description *</label>
-	  <div class="control">
-	    <input type="text" name="description" id="id-description" placeholder="1 or 2 sentence description" required>
+	  <div class="field">
+	    <label for="id-description" class="label">Description *</label>
+	    <div class="control">
+	      <input type="text" name="description" class="rounded-custom" id="id-description" placeholder="1 or 2 sentence description" required>
+	    </div>
 	  </div>
-	</div>
 
-	<div class="field">
-	  <label for="id-logo" class="label">Logo</label>
-	  <div class="control">
-	    <input type="file" name="logo" id="id-logo" placeholder="Please upload a logo">
+	  <div class="field">
+	    <label for="id-logo" class="label">Logo</label>
+	    <div class="control">
+	      <input type="file" name="logo" class="rounded-custom" id="id-logo" placeholder="Please upload a logo">
+	    </div>
 	  </div>
-	</div>
 
-      </div>      
-      <div class="column">
+        </div>      
+        <div class="column">
 
-	<div class="field">
-	  <label for="id-impact_area" class="label">Impact Area(s)</label>
-	  <div class="control">
-	    <div class="select is-multiple">
+	  <div class="field">
+	    <label for="id-impact_area" class="label">Impact Area(s)</label>
+	    <div class="control">
 	      <select name="impact_area" id="id-impact_area" multiple>
-		<option value="food-ag">Food &amp; Agriculture</option>
-		<option value="energy">Energy</option>
-		<option value="carbontech">Carbontech</option>
-		<option value="eco-bio">Ecosystems &amp; Biodiversity</option>
-		<option value="capital">Capital</option>
-		<option value="transportation">Transportation</option>
-		<option value="buildings-cities">Buildings &amp; Cities</option>
-		<option value="advocacy-activism">Advocacy &amp; Activism</option>
-		<option value="waste">Circular Economy &amp; Waste</option>
-		<option value="materials-manufacturing">Materials &amp; Manufacturing</option>
-		<option value="education-research">Education &amp; Research</option>
+                <option></option>
+	        <option value="food-ag">Food &amp; Agriculture</option>
+	        <option value="energy">Energy</option>
+	        <option value="carbontech">Carbontech</option>
+	        <option value="eco-bio">Ecosystems &amp; Biodiversity</option>
+	        <option value="capital">Capital</option>
+	        <option value="transportation">Transportation</option>
+	        <option value="buildings-cities">Buildings &amp; Cities</option>
+	        <option value="advocacy-activism">Advocacy &amp; Activism</option>
+	        <option value="waste">Circular Economy &amp; Waste</option>
+	        <option value="materials-manufacturing">Materials &amp; Manufacturing</option>
+	        <option value="education-research">Education &amp; Research</option>
 	      </select>
 	    </div>
 	  </div>
-	</div>
 
-	<div class="field">
-	  <label for="id-industry" class="label">Industry</label>
-	  <div class="control">
-	    <div class="select is-multiple">
+	  <div class="field">
+	    <label for="id-industry" class="label">Industry</label>
+	    <div class="control">
 	      <select name="industry" id="id-industry" multiple>
+                <option></option>
 		<option value="accounting">Accounting</option>
 		<option value="airlines">Airlines/Aviation</option>
 		<option value="apparel_fashion">Apparel & Fashion</option>
@@ -165,40 +165,37 @@
 	      </select>
 	    </div>
 	  </div>
-	</div>
 
-	<div class="field">
-	  <label for="id-org_type" class="label">Organization Type</label>
-	  <div class="control">
-	    <div class="select">
-	      <select name="org_type" id="id-org_type">
-		<option value="for-profit">For-Profit</option>
-		<option value="nonprofit">Non-Profit</option>
-		<option value="investors">Investors</option>
-		<option value="edu">University or other educational program</option>
-		<option value="gov">State-funded program</option>
-		<option value="media">Media</option>
-	      </select>
+	  <div class="field">
+	    <label for="id-org_type" id="label-org_type" class="label">Organization Type</label>
+	    <select name="org_type" id="id-org_type" multiple>
+              <option></option>
+	      <option value="for-profit">For-Profit</option>
+	      <option value="nonprofit">Non-Profit</option>
+	      <option value="investors">Investors</option>
+	      <option value="edu">University or other educational program</option>
+	      <option value="gov">State-funded program</option>
+	      <option value="media">Media</option>
+	    </select>
+	  </div>
+
+	  <div class="field">
+	    <label for="id-location" class="label">Location</label>
+	    <div class="control">
+	      <input type="text" name="location" class="rounded-custom" placeholder="City, State, Country">
 	    </div>
 	  </div>
-	</div>
 
-	<div class="field">
-	  <label for="id-location" class="label">Location</label>
-	  <div class="control">
-	    <input type="text" name="location" placeholder="City, State, Country">
-	  </div>
-	</div>
-
+        </div>
       </div>
-    </div>
 
-    <div class="buttons is-centered">
-      <div class="control">
-	<input type="submit" id="id-submit" class="button is-rounded" value="Submit Organization">
+      <div class="buttons is-centered">
+        <div class="control" id="submit-wrapper">
+	  <input type="submit" id="id-submit" class="button is-rounded" value="Submit Organization">
+        </div>
       </div>
-    </div>
 
-  </form>
-</body>
+    </form>
+
+  </body>
 </html>

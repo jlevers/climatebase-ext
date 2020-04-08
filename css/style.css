@@ -1,21 +1,80 @@
-* {
-    font-family: "Helvetica Neue, serif";
+body {
+  padding: 30px;
+  width: 950px;
+  background-color: #F4F4F6;
+  color: #656464;
+  font-family: "Helvetica Neue, serif";
 }
 
-body {
-    padding: 30px;
-    width: 800px;
-    background-color: #F4F4F6;
-    font-family: "Helvetica Neue, serif";
+#form label.label {
+  color: #656464;
+  margin-left: 20px;
 }
+
+#form input.rounded-custom, #form select {
+  padding: 12px;
+  background-color: white;
+  border-radius: 30px;
+  border: 2px solid #656464;
+  width: 100%;
+}
+
+.select2-selection__placeholder {
+  font-family: "Helvetica Neue, serif";
+  font-style: italic;
+  font-size: 14px;
+  color: #656464;
+}
+
+/* #form .select2-container .selection .select2-selection__arrow { */
+/*   display: none; */
+/* } */
+
+#form .select2-container .select2-selection {
+  border-radius: 30px;
+  border: 2px solid #656464;
+  background-image: url("../images/down_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 98%;
+  padding: 2px;
+}
+
+#form .select2-container .selection .select2-selection li.select2-search {
+  margin-top: 4px;
+}
+
+.select2-container .select2-dropdown {
+  border: 2px solid #656464 !important;
+}
+
+.select2-container .select2-dropdown--above {
+  border-bottom: 2px solid #656464 !important;
+}
+
+.select2-container .select2-dropdown--below {
+  border-top: 2px solid #656464;
+}
+
 
 #form input::placeholder {
-    font-style: italic;
+  font-style: italic;
+  font-family: "Helvetica Neue, serif";
+  font-size: 14px;
+  color: #656464;
+} 
+
+#form .buttons #submit-wrapper #id-submit {
+  background-color: #F16322;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
-#id-submit {
-    background-color: #F16322;
-    color: #FFF;
-    font-weight: bold;
+#form .buttons .control #id-submit {
+  color: white;
+  background-color: inherit;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
