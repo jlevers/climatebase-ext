@@ -1,22 +1,84 @@
 body {
   padding: 30px;
-  width: 950px;
+  width: 800px;
   background-color: #F4F4F6;
   color: #656464;
   font-family: "Helvetica Neue, serif";
 }
 
+/* General form styles */
 #form label.label {
   color: #656464;
   margin-left: 20px;
+  margin-bottom: 2px;
 }
 
-#form input.rounded-custom, #form select {
+#form input::placeholder, #form #logo-input-wrapper {
+  font-style: italic;
+  font-family: "Helvetica Neue, serif";
+  font-size: 14px;
+  color: #656464;
+  opacity: 100%;
+}
+
+#form #logo-input-wrapper.file-added {
+  font-style: normal;
+  color: #444;
+}
+
+#form input.rounded-custom, #form select, #form #logo-input-wrapper {
   padding: 12px;
   background-color: white;
+  width: 100%;
+}
+
+#form .required-text {
+  font-size: 10px;
+  margin-left: 20px;
+}
+
+#form .right-col {
+  margin-bottom: 30px;
+}
+
+#form input.rounded-custom:focus, #form select:focus,
+#form #logo-input-wrapper:focus,
+#form .select2-container--focus {
+  outline: none;
+  border-color: #9ecaed;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #9ecaed;
+}
+
+/* File upload */
+#form #id-logo {
+  display: none;
+}
+
+#form #logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form #logo-wrapper #logo-input-wrapper, #form #logo-wrapper #upload-button {
+  cursor: pointer;
+}
+
+#form #logo-wrapper #upload-button {
+  border: 2px solid #656464;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 14px;
+  padding: 2px 6px;
+  margin-top: 10px;
+}
+
+/* Mostly related to jQuery dropdown plugin */
+#form input.rounded-custom, #form select, #form #logo-input-wrapper,
+#form .select2-container .select2-selection {
   border-radius: 30px;
   border: 2px solid #656464;
-  width: 100%;
 }
 
 .select2-selection__placeholder {
@@ -26,13 +88,7 @@ body {
   color: #656464;
 }
 
-/* #form .select2-container .selection .select2-selection__arrow { */
-/*   display: none; */
-/* } */
-
 #form .select2-container .select2-selection {
-  border-radius: 30px;
-  border: 2px solid #656464;
   background-image: url("../images/down_arrow.png");
   background-repeat: no-repeat;
   background-position: 98%;
@@ -47,34 +103,18 @@ body {
   border: 2px solid #656464 !important;
 }
 
-.select2-container .select2-dropdown--above {
-  border-bottom: 2px solid #656464 !important;
-}
-
-.select2-container .select2-dropdown--below {
-  border-top: 2px solid #656464;
+#form .select2-container .selection .select2-selection__rendered {
+  margin-left: 8px;
+  font-size: 13px;
 }
 
 
-#form input::placeholder {
-  font-style: italic;
-  font-family: "Helvetica Neue, serif";
-  font-size: 14px;
-  color: #656464;
-} 
-
+/* Submit button */
 #form .buttons #submit-wrapper #id-submit {
   background-color: #F16322;
+  color: white;
   font-weight: bold;
   border: 1px solid black;
-  border-radius: 20px;
-}
-
-#form .buttons .control #id-submit {
-  color: white;
-  background-color: inherit;
-  border: none;
-  font-weight: bold;
-  margin-bottom: 0;
+  border-radius: 30px;
 }
 

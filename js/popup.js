@@ -8,6 +8,26 @@ $(document).ready(function() {
     }
   });
 
+  $('#logo-input-wrapper, #upload-button').click(function() {
+    $('#id-logo').click();
+  });
+
+  $('#id-logo').change(function() {
+    const fname = this.value;
+    let formText = 'Please upload a logo';
+
+    $logoInputWrapper = $('#logo-input-wrapper');
+
+    if (fname.length > 0) {
+      formText = fname.substring(fname.lastIndexOf('\\') + 1);
+      $logoInputWrapper.addClass('file-added');
+    } else {
+      $logoInputWrapper.removeClass('file-added');
+    }
+
+    $logoInputWrapper.text(formText);
+  });
+
   $('#id-impact_area').select2({
     placeholder: 'Click to select',
     multiple: true
